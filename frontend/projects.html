@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects – Project Management Tool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside id="app-sidebar" class="sidebar"></aside>
+    <div class="app-main">
+      <header id="app-topbar" class="topbar"></header>
+      <main class="content">
+        <div class="page-header">
+          <h1 class="page-title">Projects</h1>
+          <button id="new-project-btn" class="btn btn-primary" type="button">New project</button>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+          <p class="empty-note">Loading…</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="modal" id="project-modal" hidden>
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-title">New project</h3>
+        <button id="modal-close" class="modal-close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <p id="project-modal-error" class="form-error"></p>
+      <form id="project-form" novalidate>
+        <label for="project-name">Project name</label>
+        <input type="text" id="project-name" required>
+        <label for="project-description">Description</label>
+        <textarea id="project-description" rows="3"></textarea>
+        <div class="form-row form-row-3">
+          <div>
+            <label for="project-status">Status</label>
+            <select id="project-status">
+              <option>Planning</option>
+              <option>Active</option>
+              <option>Completed</option>
+            </select>
+          </div>
+          <div>
+            <label for="project-start">Start date</label>
+            <input type="date" id="project-start">
+          </div>
+          <div>
+            <label for="project-due">Due date</label>
+            <input type="date" id="project-due">
+          </div>
+        </div>
+        <label>Members</label>
+        <div id="members-checklist" class="checklist"></div>
+        <div class="modal-actions">
+          <button type="button" id="modal-cancel" class="btn btn-secondary">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

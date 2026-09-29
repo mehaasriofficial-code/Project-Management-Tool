@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in – Project Management Tool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+  <main class="auth-card">
+    <p class="auth-brand">Project Management Tool</p>
+    <h1 class="auth-heading">Log in</h1>
+    <p id="form-error" class="form-error"></p>
+    <form id="login-form" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" required autocomplete="email">
+      <label for="password">Password</label>
+      <input type="password" id="password" required autocomplete="current-password">
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+    </form>
+    <p class="auth-switch">Don't have an account? <a href="register.html">Create one</a></p>
+    <div class="auth-demo-note">
+      <p>Demo accounts (password: <code>password123</code>)</p>
+      <p>owner@demo.com &middot; developer@demo.com &middot; designer@demo.com</p>
+    </div>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

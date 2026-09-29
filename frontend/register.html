@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create account – Project Management Tool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+  <main class="auth-card">
+    <p class="auth-brand">Project Management Tool</p>
+    <h1 class="auth-heading">Create your account</h1>
+    <p id="form-error" class="form-error"></p>
+    <form id="register-form" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" required autocomplete="name">
+      <label for="email">Email</label>
+      <input type="email" id="email" required autocomplete="email">
+      <label for="password">Password</label>
+      <input type="password" id="password" required autocomplete="new-password" minlength="6">
+      <label for="confirm-password">Confirm password</label>
+      <input type="password" id="confirm-password" required autocomplete="new-password" minlength="6">
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+    </form>
+    <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

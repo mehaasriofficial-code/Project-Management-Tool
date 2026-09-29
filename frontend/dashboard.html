@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard – Project Management Tool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside id="app-sidebar" class="sidebar"></aside>
+    <div class="app-main">
+      <header id="app-topbar" class="topbar"></header>
+      <main class="content">
+        <h1 class="page-title">Dashboard</h1>
+        <div class="stats-grid" id="stats-grid">
+          <p class="empty-note">Loading…</p>
+        </div>
+        <div class="content-columns">
+          <section class="panel">
+            <h2>Recent projects</h2>
+            <div id="recent-projects" class="list"><p class="empty-note">Loading…</p></div>
+          </section>
+          <section class="panel">
+            <h2>Recent tasks</h2>
+            <div id="recent-tasks" class="list"><p class="empty-note">Loading…</p></div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
